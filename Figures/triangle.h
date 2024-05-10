@@ -4,7 +4,7 @@
 #include <iostream>
 class Triangle :public Geometric_Figure {
 public:
-	Triangle(double w1,double w2,double w3):width1(w1), 
+	Triangle_sides(double w1,double w2,double w3):width1(w1), 
 		width2(w2), 
 		width3(w3) {}
 	double calc_perimetr() override;

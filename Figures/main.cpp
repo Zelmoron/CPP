@@ -13,10 +13,24 @@ int main()
 
     std::cout << "\n";
 
+    Triangle k(0,0,0,3,3,0);
+    k.name();
+    std::cout << "Perimetr: " << k.calc_perimetr() << '\n';
+    std::cout << "Area: " << k.calc_area() << '\n';
+
+    std::cout << "\n";
+
     Rectangle r(5, 5);
     r.name();
     std::cout << "Perimetr: " << r.calc_perimetr() << '\n';
     std::cout << "Area: " << r.calc_area() << '\n';
+
+    std::cout << "\n";
+
+    Rectangle r_k(0, 0,0,3,5,3,5,0);
+    r_k.name();
+    std::cout << "Perimetr: " << r_k.calc_perimetr() << '\n';
+    std::cout << "Area: " << r_k.calc_area() << '\n';
 
     std::cout << "\n";
 
