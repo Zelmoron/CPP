@@ -4,10 +4,15 @@
 #include "rectangle.h"
 #include "elips.h"
 #include "circl.h"
+#include <vector>
+
 int main()
 {
+    
     Triangle t(6,5,2.2);
     t.name();
+    
+
     std::cout<<"Perimetr: " << t.calc_perimetr() << '\n';
     std::cout << "Area: " << t.calc_area() << '\n';
 
