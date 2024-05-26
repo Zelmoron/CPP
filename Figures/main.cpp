@@ -4,49 +4,40 @@
 #include "rectangle.h"
 #include "elips.h"
 #include "circl.h"
+#include <vector>
+
+double sum(const std::vector<Geometric_Figure*>& list) {
+    double result = 0;
+    for (auto sm : list) {
+        result += sm->calc_area();
+    }
+    return result;
+}
+
 int main()
 {
-    Triangle t(6,5,2.2);
-    t.name();
-    std::cout<<"Perimetr: " << t.calc_perimetr() << '\n';
-    std::cout << "Area: " << t.calc_area() << '\n';
-
-    std::cout << "\n";
-
+    std::vector<Geometric_Figure*> list;
+  
+    Triangle t(6,5,2.2);         
+    list.push_back(&t);
     Triangle k(0,0,0,3,3,0);
-    k.name();
-    std::cout << "Perimetr: " << k.calc_perimetr() << '\n';
-    std::cout << "Area: " << k.calc_area() << '\n';
-
-    std::cout << "\n";
-
+    list.push_back(&k);
     Rectangle r(5, 5);
-    r.name();
-    std::cout << "Perimetr: " << r.calc_perimetr() << '\n';
-    std::cout << "Area: " << r.calc_area() << '\n';
-
-    std::cout << "\n";
-
+    list.push_back(&r);
     Rectangle r_k(0, 0,0,3,5,3,5,0);
-    r_k.name();
-    std::cout << "Perimetr: " << r_k.calc_perimetr() << '\n';
-    std::cout << "Area: " << r_k.calc_area() << '\n';
-
-    std::cout << "\n";
-
+    list.push_back(&r_k);
     Elips e(1, 1,2,4);
-    e.name();
-    std::cout << "Perimetr: " << e.calc_perimetr() << '\n';
-    std::cout << "Area: " << e.calc_area() << '\n';
-
-    std::cout << "\n";
-
+    list.push_back(&e);
     Circl c(1, 1, 5);
-    c.name();
-    std::cout << "Perimetr: " << c.calc_perimetr() << '\n';
-    std::cout << "Area: " << c.calc_area() << '\n';
+    list.push_back(&c);
 
-
+    for (auto figure : list) {
+        figure->name();
+        std::cout << "Perimetr: " << figure->calc_perimetr() << '\n';
+        std::cout << "Area: " << figure->calc_area() << '\n';
+    }
+    
+    std::cout << sum(list);
 
 }
 
