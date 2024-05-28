@@ -34,6 +34,7 @@ Map::Map() : map_(MAP_SIZE, std::vector<int>(MAP_SIZE))
 	//};
 
 	ScanPos(); // ищем 0
+	ScanPosNumber();
 }
 
 const std::vector<std::vector<int>>& Map::GetMap()
@@ -90,7 +91,7 @@ void Map::PrintMap()
 
 	for (int i = 0; i < MAP_SIZE; i++) {
 		for (int j = 0; j < MAP_SIZE; j++) {
-			if (map_[i][j] / 10 == 1) { // прсто для красоты
+			if (map_[i][j] / 10 == 1) { // просто для красоты
 				std::cout << " " << map_[i][j] << " | ";
 			}
 			else {
@@ -126,3 +127,32 @@ bool Map::CheckWin()
 	}
 	return is_win;
 }
+
+void Map::ScanPosNumber()
+{
+	for (int i = 0; i < MAP_SIZE; i++) {
+		for (int j = 0; j < MAP_SIZE; j++) {
+			if (map_[i][j] == 1) {
+				current_pos_n_ = { i,j };
+			}
+		}
+	}
+}
+
+std::pair<int,int> Map::GetZeroPos()
+{
+	int x = current_pos_0_[0];
+	int y = current_pos_0_[1];
+	std::pair <int,int> p1(x,y);
+	return p1;
+}
+
+
+std::pair<int, int> Map::GetNumberPos() 
+{
+	int x2 = current_pos_n_[0];
+	int y2 = current_pos_n_[1];
+	std::pair <int, int> p2(x2, y2);
+	return p2;
+}
+

@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include "Map.h"
+
 class Game { // класс для игры в 15
 public:
 	void Play(); // Запуск игры
