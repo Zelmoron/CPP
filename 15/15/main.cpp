@@ -6,9 +6,9 @@
 #include "Astar.h"
 int main() {
 	
-	//Game game;
-	//game.Play(); // идем в функцию play
-	A a;
-	a.AutoGame();
+	Game game;
+	game.Play(); // идем в функцию play
+	/*A a;
+	a.AutoGame();*/
 	
 }
