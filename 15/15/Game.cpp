@@ -60,16 +60,7 @@ void Game::RequestAndStep()
 
 
 	}
-	/*if (mv == 0xE0)
-		mv = _getch();
-		map_.Move(2);
-	if (mv == 0xE0)
-		mv = _getch();
-		map_.Move();
-	if (mv == 0xE0)
-		mv = _getch();
-		map_.Move(3);*/
-		//map_.Move(dir); // кидаем этот ход в класс директория
+
 
 	if (map_.CheckWin()) {
 		return;

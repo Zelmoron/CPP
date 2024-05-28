@@ -8,9 +8,9 @@ public:
 	Map(); //КОнструктор
 	const std::vector<std::vector<int>>& GetMap(); //обвертка для карты
 	void Move(int direction); //Функция отвечающая за ходы
-	void PrintMap();//вывод карты в консоль
-	void ScanPos();//сканировнаие позиции пустой клетки(0)
-	bool CheckWin();//обработка победы
+	void PrintMap(); //вывод карты в консоль
+	void ScanPos(); //сканировнаие позиции пустой клетки(0)
+	bool CheckWin(); //обработка победы
 
 private:
 

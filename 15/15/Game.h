@@ -3,7 +3,7 @@
 #include "Map.h"
 class Game { // класс для игры в 15
 public:
-	void Play();
+	void Play(); // Запуск игры
 
 	const std::vector<std::vector<int>>& GetMap();
 

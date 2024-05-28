@@ -7,7 +7,7 @@ Map::Map() : map_(MAP_SIZE, std::vector<int>(MAP_SIZE))
 	for (int i = 0; i <= 15; i++) {
 		random_numbers.push_back(i); //0..15
 	}
-
+	srand(time(0));
 	for (int j = 0; j < 10; j++) { // для рандомных чисел 
 		for (int i = 0; i < random_numbers.size(); ++i)
 			std::swap(random_numbers[i], random_numbers[std::rand() % random_numbers.size()]); //0..15
@@ -19,12 +19,19 @@ Map::Map() : map_(MAP_SIZE, std::vector<int>(MAP_SIZE))
 		}
 	}
 
-	/*map_ = {
-		{1,2,3,4},
-		{5,6,7,8},								// для быстрой победы
-		{9,10,11,12},
-		{13,14,0,15}
-	};*/
+	//map_ = {
+	//	{1,2,3,4},
+	//	{5,6,7,8},								// для быстрой победы
+	//	{9,10,11,12},
+	//	{13,14,0,15}
+	//};
+
+	//map_ = {
+	//	{4,15,1,12},
+	//	{3,6,13,9},								// Пример с картинки
+	//	{5,10,7,8},
+	//	{2,14,11,0}
+	//};
 
 	ScanPos(); // ищем 0
 }
