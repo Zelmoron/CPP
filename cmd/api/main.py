@@ -9,3 +9,7 @@ def read_root():
 @app.get("/items")
 def get_items():
     return {"items": ["item1", "item2", "item3"]}
+
+@app.get("/goods")
+def get_items():
+    return {"items": ["item1", "item2", "item3"]}
